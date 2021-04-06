@@ -21,11 +21,16 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.pink,
         accentColor: Colors.deepPurple,
         accentColorBrightness: Brightness.dark,
-        buttonTheme: ButtonTheme.of(context).copyWith(
-          buttonColor: Colors.pink,
-          textTheme: ButtonTextTheme.primary,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            primary: Colors.pink,
+            textStyle: TextStyle(
+              color: Theme.of(context).primaryColor,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
+          ),
         ),
       ),
       home: StreamBuilder(
